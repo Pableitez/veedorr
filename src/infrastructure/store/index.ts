@@ -2,14 +2,14 @@ import { SimpleStore } from './store';
 import { createTransactionsSlice } from './slices/transactionsSlice';
 import { createBudgetsSlice } from './slices/budgetsSlice';
 import { createSettingsSlice } from './slices/settingsSlice';
-import { StoreState, DEFAULT_SETTINGS } from '../../shared/types';
-import { DEFAULT_SETTINGS as DEFAULT_SETTINGS_CONST } from '../../shared/constants';
+import { StoreState } from '../../shared/types';
+import { DEFAULT_SETTINGS } from '../../shared/constants';
 
 // Estado inicial de la aplicación
 const initialState: StoreState = {
   transactions: [],
   budgets: [],
-  settings: DEFAULT_SETTINGS_CONST,
+  settings: DEFAULT_SETTINGS,
 };
 
 // Crear instancia del store
