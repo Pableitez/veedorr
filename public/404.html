@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veedor — Control sencillo de tus finanzas</title>
+    <script>
+      // Redirigir a la página principal con hash routing
+      // Esto permite que las rutas SPA funcionen correctamente en GitHub Pages
+      const pathSegmentsToKeep = 1; // Mantener solo el nombre del repositorio
+      const pathSegments = window.location.pathname.split('/').filter(segment => segment);
+      const segmentsToKeep = pathSegments.slice(0, pathSegmentsToKeep);
+      const newPath = '/' + segmentsToKeep.join('/') + '/';
+      
+      // Si hay un hash, lo mantenemos
+      const hash = window.location.hash;
+      const newUrl = newPath + (hash ? '#' + hash.substring(1) : '');
+      
+      // Redirigir
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body>
+    <div style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    ">
+      <div style="text-align: center;">
+        <h1>Redirigiendo a Veedor...</h1>
+        <p>Si no eres redirigido automáticamente, <a href="/veedor/" style="color: #4f46e5;">haz clic aquí</a>.</p>
+      </div>
+    </div>
+  </body>
+</html>

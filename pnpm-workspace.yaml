@@ -1,0 +1,7 @@
+# Configuración de workspace para pnpm
+# Permite manejar múltiples paquetes en el futuro
+
+packages:
+  - '.'
+  # Futuro: - 'packages/*'
+  # Futuro: - 'apps/*'
